@@ -7,7 +7,6 @@ async function loadQuotes() {
         data.forEach(row => {
             const tr = document.createElement('tr');
             tr.innerHTML = `
-                <td>${row.id}</td>
                 <td>${row.year}</td>
                 <td>${row.month}</td>
                 <td>${Number(row.price).toLocaleString()}</td>
