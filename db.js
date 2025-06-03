@@ -19,7 +19,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
         console.log('成功開啟資料庫:', dbPath);
         // 檢查並建立 house_prices table
         db.run(`CREATE TABLE IF NOT EXISTS house_prices (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
             year INTEGER NOT NULL,
             month INTEGER NOT NULL,
             price INTEGER NOT NULL
