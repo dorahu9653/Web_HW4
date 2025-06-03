@@ -73,10 +73,10 @@ document.getElementById('search-form').addEventListener('submit', async function
             data.forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td>${row.id}</td>
                     <td>${row.year}</td>
                     <td>${row.month}</td>
                     <td>${Number(row.price).toLocaleString()}</td>
+                    <td><button class="delete-btn" data-id="${row.id}">刪除</button></td>
                 `;
                 tbody.appendChild(tr);
             });
